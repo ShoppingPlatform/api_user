@@ -9,7 +9,7 @@ const router = require("express").Router();
 const CryptoJS = require("crypto-js");
 
 //UPDATE
-router.put("/:id",verifyTokenAndAuthorization, async (req, res) => {
+router.put("/:id", async (req, res) => {
   if (req.body.password) {
     req.body.password = CryptoJS.AES.encrypt(
       req.body.password,
@@ -66,7 +66,7 @@ router.get("/",verifyTokenAndAuthorization, async (req, res) => {
 });
 
 
-router.post("/email",verifyTokenAndAuthorization, async (req, res) => {
+router.post("/email", async (req, res) => {
   console.log(req.body.email);
   try {
     const user = await User.find({ email: req.body.email });
