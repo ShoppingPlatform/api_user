@@ -16,11 +16,11 @@ router.post("/register", async (req, res) => {
     isActivated: req.body.isActivated,
     password: CryptoJS.AES.encrypt(
       req.body.password,
-      process.env.PASS_SEC
+      "mindfulness"
     ).toString(),
     confirmPassword: CryptoJS.AES.encrypt(
       req.body.confirmPassword,
-      process.env.PASS_SEC
+      "mindfulness"
     ).toString(),
   });
 
