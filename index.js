@@ -18,7 +18,7 @@ mongoose
   });
 
 var corsOptions = {
-  origin: "http://localhost:3000",
+  origin: "https://63255e563cd2e07f436de993--resonant-licorice-b9748e.netlify.app/",
 };
 
 app.use(cors(corsOptions));
